@@ -223,20 +223,36 @@ def stream_rag_response(
         yield chunk.content, source_docs
 
 
+def get_api_key(user_input_key: str = "") -> str:
+    """Retrieve API key from user input, environment variable, or Streamlit secrets."""
+    if user_input_key and user_input_key.strip():
+        return user_input_key.strip()
+    if os.getenv("GOOGLE_API_KEY"):
+        return os.getenv("GOOGLE_API_KEY")
+    try:
+        if hasattr(st, "secrets") and "GOOGLE_API_KEY" in st.secrets:
+            return str(st.secrets["GOOGLE_API_KEY"]).strip()
+    except Exception:
+        pass
+    return ""
+
+
 # 5. Sidebar Setup & Controls
 def sidebar():
     with st.sidebar:
         st.title("⚙️ Control Panel")
         
         # API Key Configuration
+        default_key = get_api_key()
         api_key = st.text_input(
             "Google Gemini API Key",
             type="password",
-            value=os.getenv("GOOGLE_API_KEY", ""),
+            value=default_key,
             help="Get your free API key at aistudio.google.com"
         )
-        if api_key:
-            os.environ["GOOGLE_API_KEY"] = api_key
+        resolved_key = get_api_key(api_key)
+        if resolved_key:
+            os.environ["GOOGLE_API_KEY"] = resolved_key
             
         st.markdown("---")
         st.subheader("🧠 Model & Retrieval")
