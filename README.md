@@ -2,11 +2,15 @@
 
 An interactive, production-ready Streamlit application that allows users to upload multiple PDF documents and chat with them using **Retrieval-Augmented Generation (RAG)** powered by **Google Gemini** and **LangChain**.
 
+🌐 **Live Demo**: [https://pushpeshpant14-multi-pdf-rag-assistant-app-2inzc3.streamlit.app/](https://pushpeshpant14-multi-pdf-rag-assistant-app-2inzc3.streamlit.app/)
+
 ---
 
 ## 🌟 Key Features
 
 - **📑 Multi-PDF Upload & Extraction**: Reads and parses text across multiple PDF documents while retaining page-level metadata.
+- **⚡ Real-Time Streaming Responses**: Generates responses token-by-token with typewriter streaming.
+- **💬 Conversational Multi-Turn Chat**: Natural chat interface with avatars, user history, and contextual follow-ups.
 - **✂️ Recursive Document Chunking**: Splits large texts into semantically coherent segments with configurable chunk size and overlap.
 - **⚡ Dual Vector Store Support**:
   - **FAISS**: In-memory, ultra-fast vector similarity search.
@@ -14,9 +18,11 @@ An interactive, production-ready Streamlit application that allows users to uplo
 - **🧠 Modern Google Gemini Integration**:
   - **Embeddings**: Uses `models/gemini-embedding-001` (3072-dimensional vector space).
   - **LLM**: Supports `gemini-2.5-flash`, `gemini-2.5-pro`, and `gemini-flash-latest`.
-- **🎯 Hallucination-Resistant & Grounded**: Constrains answers strictly to the retrieved context.
-- **🔍 Source Citations**: Every response includes file names, page numbers, and chunk references used to construct the answer.
-- **⚙️ Dynamic Configuration**: Easily tune chunk parameters, switch vector databases, and select Gemini models via the sidebar UI.
+- **💡 Suggested Question Chips**: One-click quick prompts for instant summaries, key findings, and quiz questions.
+- **🔍 Source Citations**: Every response includes expandable source cards with file names, page numbers, and chunk excerpts.
+- **📊 Document Insights Dashboard**: Live metric counters for files, pages, chunks, active vector database, and model.
+- **📥 Chat Export**: Export conversation transcripts as Markdown directly from the sidebar.
+- **⚙️ Dynamic Configuration**: Easily tune chunk parameters, top-k retrieval, and Gemini models via the sidebar UI.
 
 ---
 
