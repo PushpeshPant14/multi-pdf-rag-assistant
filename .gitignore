@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.venv*/
+
+# Environment and secrets
+.env
+.env.*
+
+# Temporary vector stores & caches
+chromadb_*
