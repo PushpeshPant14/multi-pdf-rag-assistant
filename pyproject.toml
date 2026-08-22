@@ -1,7 +1,7 @@
 [project]
-name = "rag-document-chatbot"
+name = "multi-pdf-rag-assistant"
 version = "0.1.0"
-description = "RAG-based Document Chatbot using Streamlit, LangChain, FAISS/ChromaDB, and Google Gemini"
+description = "Multi-PDF RAG Chatbot using Streamlit, LangChain, FAISS/ChromaDB, and Google Gemini"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [

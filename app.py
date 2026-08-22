@@ -20,7 +20,7 @@ from langchain_core.prompts import PromptTemplate
 load_dotenv(Path(__file__).parent / ".env")
 load_dotenv()
 
-st.set_page_config(page_title="RAG Document Chatbot", page_icon="📄", layout="wide")
+st.set_page_config(page_title="Multi-PDF RAG Chatbot", page_icon="📄", layout="wide")
 
 PROMPT_TEMPLATE = """
 You are a helpful document assistant. Answer the user's question using only the retrieved context.
@@ -123,8 +123,8 @@ def sidebar():
 
 
 def main():
-    st.title("📄 RAG-based Document Chatbot")
-    st.caption("Upload PDFs, build embeddings with FAISS or ChromaDB, and ask grounded questions using Gemini.")
+    st.title("📄 Multi-PDF RAG Chatbot")
+    st.caption("Upload multiple PDFs, build embeddings with FAISS or ChromaDB, and chat with your documents using Gemini.")
 
     store_type, chunk_size, chunk_overlap, model_name = sidebar()
 
