@@ -66,7 +66,7 @@ An interactive, production-ready Streamlit application that allows users to uplo
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/multi-pdf-rag-assistant.git
+git clone https://github.com/PushpeshPant14/multi-pdf-rag-assistant.git
 cd multi-pdf-rag-assistant
 ```
 
