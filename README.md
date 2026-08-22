@@ -1,4 +1,4 @@
-# 📄 Multi-PDF RAG Chatbot
+# 📄 Multi-PDF RAG Assistant
 
 An interactive, production-ready Streamlit application that allows users to upload multiple PDF documents and chat with them using **Retrieval-Augmented Generation (RAG)** powered by **Google Gemini** and **LangChain**.
 
@@ -66,8 +66,8 @@ An interactive, production-ready Streamlit application that allows users to uplo
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/multi-pdf-rag-chatbot.git
-cd multi-pdf-rag-chatbot
+git clone https://github.com/<your-username>/multi-pdf-rag-assistant.git
+cd multi-pdf-rag-assistant
 ```
 
 ### 2. Configure Your API Key
@@ -120,7 +120,7 @@ Open your browser at `http://localhost:8501`.
 ## 📁 Project Structure
 
 ```text
-multi-pdf-rag-chatbot/
+multi-pdf-rag-assistant/
 │
 ├── app.py              # Main Streamlit application & RAG pipeline
 ├── requirements.txt    # Python dependencies (for pip)
